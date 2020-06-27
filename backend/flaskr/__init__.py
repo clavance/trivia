@@ -152,7 +152,6 @@ def create_app(test_config=None):
     category = int(request.get_json()['quiz_category']['id'])
     questions = request.get_json()['previous_questions']
 
-    '''create random, and unique question for the category'''
     if category == 0:
       unique_questions = Question.query.all()
 
